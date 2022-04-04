@@ -6,10 +6,10 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "npx concurrently npm:express npm:build",
+    "start": "concurrently npm:express npm:build",
     "express": "node ./server/index.js",
     "dev": "nodemon ./server/index.js",
-    "build": "cd ./client && npm run build"
+    "build": "cd ./client && npm install && npm run build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
